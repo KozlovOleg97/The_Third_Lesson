@@ -1,8 +1,10 @@
-﻿using The_Third_Lesson;
+﻿using CalculatorLibrary;
 
 bool endApp = false;
 Console.WriteLine("Console Calculator in C#\r");
 Console.WriteLine("------------------------\n");
+
+Calculator calculator = new Calculator();
 
 while (!endApp)
 {
@@ -42,7 +44,7 @@ while (!endApp)
 
     try
     {
-        result = Calculator.DoOperation(cleanNum1, cleanNum2, operators);
+        result = calculator.DoOperation(cleanNum1, cleanNum2, operators);
         if (double.IsNaN(result))
         {
             Console.WriteLine("This operation will result in a mathematical error.\n");
@@ -62,4 +64,7 @@ while (!endApp)
 
     Console.WriteLine("\n");
 }
+
+calculator.Finish();
+
 return;
