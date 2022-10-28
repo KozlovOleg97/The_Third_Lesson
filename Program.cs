@@ -1,4 +1,4 @@
-﻿using The_Third_Lesson;
+﻿using CalculatorLibrary;
 
 bool endApp = false;
 Console.WriteLine("Console Calculator in C#\r");
