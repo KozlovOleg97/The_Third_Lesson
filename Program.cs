@@ -1,9 +1,100 @@
 ﻿using CalculatorLibrary;
 
 
-// new realization
 
-int a = 10; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// new realization with helping Enum
+
+// DoOperation(5, 5, MainOperation.Add);
+
+
+
+//void DoOperation(double num1, double num2, MainOperation operation)
+//{
+//    double result;
+
+
+//    switch (operation)
+//    {
+//        case MainOperation.Add:
+//            result = num1 + num2;
+//            Console.Write($"Input first enter: {num1}");
+//            Console.Write(num2);
+//            Console.WriteLine($"{num1}+{num2}={result}");
+//            break;
+            
+//        case MainOperation.Subtract:
+//            result = num1 - num2;
+//            Console.WriteLine("Output: " + result);
+//            break;
+//        case MainOperation.Multiply:
+//            result = num1 * num2;
+//            Console.WriteLine("Output: " + result);
+//            break;
+//        case MainOperation.Divide:
+//            result = num1 / num2;
+//            Console.WriteLine("Output: " + result);
+//            break;
+//    }
+
+ 
+
+
+
+    //double result = operation switch
+    //{
+
+    //    MainOperation.Add => num1 + num2,
+    //    MainOperation.Subtract => num1 - num2,
+    //    MainOperation.Multiply => num1 * num2,
+    //    MainOperation.Divide => num1 / num2
+
+    //};
+
+
+//}
+
+//enum MainOperation
+//{
+//    Add,
+//    Subtract,
+//    Multiply,
+//    Divide
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //bool endApp = false;
 //Console.WriteLine("Console Calculator in C#\r");
