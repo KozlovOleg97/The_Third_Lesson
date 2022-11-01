@@ -3,6 +3,63 @@
 
 
 
+double _firstValue, _secondValue;
+string _DoOperation;
+
+while (true)
+    try
+    {
+        Console.Write("Input first number: ");
+        _firstValue = double.Parse(Console.ReadLine());
+
+        Console.Write("Input second number: ");
+        _secondValue = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Choose Operations: '+' '-' '*' '/' ");
+        _DoOperation = Console.ReadLine();
+
+
+
+        switch (_DoOperation)
+        {
+            case "+":
+                Console.WriteLine($"Output: {_firstValue + _secondValue}");
+                break;
+            case "-":
+                Console.WriteLine($"Output: {_firstValue - _secondValue}");
+                break;
+            case "*":
+                Console.WriteLine($"Output: {_firstValue * _secondValue}");
+                break;
+            case "/":
+                if (_secondValue == 0)
+                {
+                    Console.WriteLine("can't divided by 0! Try Again");
+                }
+                Console.WriteLine($"Output: {_firstValue / _secondValue}");
+                break;
+
+            default:
+                Console.WriteLine("Incorrect input! Pls. Try Again");
+                break;
+        }
+    }
+
+
+    catch
+    {
+        
+
+
+
+    }
+
+
+
+
+
+
+
 
 
 
@@ -43,7 +100,7 @@
 //            Console.Write(num2);
 //            Console.WriteLine($"{num1}+{num2}={result}");
 //            break;
-            
+
 //        case MainOperation.Subtract:
 //            result = num1 - num2;
 //            Console.WriteLine("Output: " + result);
@@ -58,19 +115,19 @@
 //            break;
 //    }
 
- 
 
 
 
-    //double result = operation switch
-    //{
 
-    //    MainOperation.Add => num1 + num2,
-    //    MainOperation.Subtract => num1 - num2,
-    //    MainOperation.Multiply => num1 * num2,
-    //    MainOperation.Divide => num1 / num2
+//double result = operation switch
+//{
 
-    //};
+//    MainOperation.Add => num1 + num2,
+//    MainOperation.Subtract => num1 - num2,
+//    MainOperation.Multiply => num1 * num2,
+//    MainOperation.Divide => num1 / num2
+
+//};
 
 
 //}
