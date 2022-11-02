@@ -1,58 +1,81 @@
 ﻿using CalculatorLibrary;
-
-
-
+using The_Third_Lesson;
 
 double _firstValue, _secondValue;
 string _DoOperation;
+double output = 0;
 
 while (true)
+{
     try
     {
-        Console.Write("Input first number: ");
+        Console.Write("Input the first number: ");
         _firstValue = double.Parse(Console.ReadLine());
 
-        Console.Write("Input second number: ");
+        Console.Write("Input the second number: ");
         _secondValue = double.Parse(Console.ReadLine());
 
-        Console.WriteLine("Choose Operations: '+' '-' '*' '/' ");
-        _DoOperation = Console.ReadLine();
-
-
-
-        switch (_DoOperation)
-        {
-            case "+":
-                Console.WriteLine($"Output: {_firstValue + _secondValue}");
-                break;
-            case "-":
-                Console.WriteLine($"Output: {_firstValue - _secondValue}");
-                break;
-            case "*":
-                Console.WriteLine($"Output: {_firstValue * _secondValue}");
-                break;
-            case "/":
-                if (_secondValue == 0)
-                {
-                    Console.WriteLine("can't divided by 0! Try Again");
-                }
-                Console.WriteLine($"Output: {_firstValue / _secondValue}");
-                break;
-
-            default:
-                Console.WriteLine("Incorrect input! Pls. Try Again");
-                break;
-        }
-    }
-
-
-    catch
-    {
         
+    }
 
-
+    catch (Exception)
+    {
+        Console.WriteLine("You must enter a number ");
+        Console.ReadLine();
+        continue;
 
     }
+
+    Console.WriteLine("Choose Operations: '+' '-' '*' '/' ");
+    _DoOperation = Console.ReadLine();
+
+    switch (_DoOperation)
+    {
+        case "+":
+            Console.WriteLine($"Output: {_firstValue + _secondValue}");
+            break;
+        case "-":
+            Console.WriteLine($"Output: {_firstValue - _secondValue}");
+            break;
+        case "*":
+            Console.WriteLine($"Output: {_firstValue * _secondValue}");
+            break;
+        case "/":
+            if (_secondValue == 0)
+            {
+                Console.WriteLine("can't divided by 0! Try Again");
+                continue;
+            }
+            Console.WriteLine($"Output: {_firstValue / _secondValue}");
+            break;
+
+        default:
+            Console.WriteLine("Incorrect input! Pls. Try Again");
+            break;
+    }
+
+    AlgorithmQueue result = new AlgorithmQueue();
+    result.AddToQueue(output);
+    result.OutputLast5Results();
+    Console.ReadLine();
+
+
+    Console.Clear();
+}
+
+
+
+
+
+
+
+    //catch
+    //{
+
+
+
+
+//}
 
 
 
